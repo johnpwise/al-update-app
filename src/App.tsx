@@ -1,37 +1,36 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  // Single update text stored in code
+  const updateText = 'Resting and feeling okay today. Thank you for checking in.'
+  const [dark, setDark] = useState(false)
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+    <div className={dark ? 'app dark' : 'app'}>
+      <header className="app-header">
+        <div className="title-group">
+          <h1 className="app-title">Health Update</h1>
+          <p className="subtitle">Latest update</p>
+        </div>
+        <button className="mode-toggle" onClick={() => setDark(d => !d)} aria-label="Toggle color theme">
+          {dark ? 'Light' : 'Dark'} Mode
         </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-        <p>
-          This is the app you can use to keep people updated on your dad.
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      </header>
+
+      <main className="content">
+        <section className="updates" aria-labelledby="update-heading">
+          <h2 id="update-heading">Latest Update</h2>
+          <div className="update-item" style={{marginTop: '0.75rem'}}>
+            <span className="update-text">{updateText}</span>
+          </div>
+        </section>
+      </main>
+
+      {/* <footer className="footer">
+        <p>Updated manually. Timezone: Local.</p>
+      </footer> */}
+    </div>
   )
 }
 
