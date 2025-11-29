@@ -23,7 +23,7 @@ function App() {
     { id: 4, date: '2025-08-13', time: '00:00', text: 'Consultant spoke to us to say he had been prepping dad for respite/palliative care - he had had another bleed which had been observed by the CT scan they did once he was admitted. Told that if they had known he had been this bad before leaving previous hospital they would not have taken him. Thankfully they did and Dad showed some response the next day when he opened his eyes to nursing staff .' },
     { id: 3, date: '2025-08-12', time: '00:00', text: 'Place secured at specialist Stroke Ward Canterbury - just in the nick of time - dad had deteriorated. Got to Canterbury 00:30am - left him to rest on ward.' },
     { id: 2, date: '2025-08-11', time: '00:00', text: 'Dads 80th Birthday - survived the night in resuss - stabilised and moved to another ward for recovery. Awaited Stroke ward space at Canterbury hospital. Liz & John stayed overnight until moved to Canterbury hospital.' },
-    { id: 1, date: '2025-08-10', time: '18:00', text: 'Admitted to Hospital - CT scan showed big IntraCranial Hemorrhage. Admitted to Resuss - told to prep for worst - hope for best.' }
+    { id: 1, date: '2025-08-10', time: '18:00', text: 'Admitted to Hospital - CT scan showed big IntraCranial Hemorrhage. Admitted to Resuss - told to prep for worst - hope for best. 3% surivival rate given by consultant.' }
   ]
 
   const [dark, setDark] = useState(false)
