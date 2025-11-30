@@ -54,9 +54,6 @@ body,
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
-  position: sticky;
-  top: 0;
-  backdrop-filter: saturate(180%) blur(10px);
   z-index: 10;
 }
 
