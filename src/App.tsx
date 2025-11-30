@@ -6,7 +6,8 @@ type Entry = { id: number; date: string; text: string }
 function App() {
   // Timeline entries (newest first by date/time when rendered)
     const entries: Entry[] = [
-      { id: 19, date: '2025-11-30', text: 'Dad had a better sleep and was up and out of bed before 10am. Was hoping to get out of the house and about a bit today as the weather was bright.' },
+
+      { id: 19, date: '2025-11-30', text: 'Dad had a better sleep and was up and out of bed before 10am. Was hoping to get out of the house and about a bit today as the weather was bright. There is still an element of confusion and potential hallucinations overnight.' },
       { id: 18, date: '2025-11-29', text: 'Dad constantly losing things including letters/glasses - very confused - not understanding what family are telling him about his home being his home - would understand better with rest - he is very restless - possibly medication side effects. Needs lots of rest and to do little by little each day then rest for now. Talking therapy planned for a week or twos time. Dad needs time at the moment.' },
       { id: 17, date: '2025-11-28', text: 'Dad convinced he is being moved out of his home - paranoid that family is selling it from under him - again the opposite is happening - reassuring him he is staying at home and we are stopping him from going in a care home.' },
       { id: 16, date: '2025-11-22', text: 'Dad more with it today - sometimes restless at night and wandering but sleeping a lot in the day to aid recovery.' },
@@ -49,6 +50,18 @@ function App() {
         <div className="title-group">
           <h1 className="app-title">Health Update</h1>
           <p className="subtitle">Recent timeline</p>
+          <p>This page is to provide a regular health update on Dad's condition. As we know he suffered a brain haemorrhage in August 2025. 
+            This is a very serious condition and providing updates regularly is proving really difficult for immediate family as the 
+            journey is so up and down. One minute he can be doing much better but the second bleed was quite recent and a shock to us 
+            all - this is still showing what damage has been done and we are unsure what recovery will look like.</p> 
+            
+            <p>It is likely to be a long up and down journey so providing even weekly updates is very difficult at times so the update may just be no change as 
+            that is all we can provide for now - however we will aim to try and update this weekly in an attempt to keep loved ones/family/friends updated.</p> 
+            
+            <p>For now Dad is fully mobile but needs assistance and prompts to do things like getting dressed in the morning. He is lucid sometimes but there is a long way to go
+            and so he at this time is unable to hold focus to have any meaningful conversations at this time. We just need to keep positive, allow him time to rest and updates will follow.</p>
+            
+            <p>We are unable to answer questions for now as this is a very challenging time right now - all we ask is that he's given time to have a stronger recovery this time. Thank you.</p>
         </div>
         <button className="mode-toggle" onClick={() => setDark(d => !d)} aria-label="Toggle color theme">
           {dark ? 'Light' : 'Dark'} Mode
