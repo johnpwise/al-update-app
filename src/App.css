@@ -56,6 +56,29 @@ body,
   box-shadow: var(--shadow-sm);
   z-index: 10;
 }
+.header-actions { display: flex; gap: .5rem; }
+.collapse-toggle {
+  border: 1px solid var(--border);
+  background: var(--bg-alt);
+  color: var(--text);
+  font-size: 0.75rem;
+  padding: 0.55rem 0.75rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: background .25s, color .25s, border-color .25s;
+}
+.collapse-toggle:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+.app-header.is-collapsed {
+  padding: .6rem .9rem;
+}
+.app-header.is-collapsed .app-title { font-size: clamp(1.25rem, 5vw, 1.6rem); }
+.app-header.is-collapsed .subtitle { display: none; }
+.app-header.is-collapsed .title-group { max-height: 2.2rem; overflow: hidden; }
+
+.title-group { transition: max-height .25s ease; }
 
 .title-group {
   flex: 1;

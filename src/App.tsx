@@ -29,6 +29,7 @@ function App() {
   ]
 
   const [dark, setDark] = useState(false)
+  const [collapsed, setCollapsed] = useState(false)
 
   const today = new Date()
 
@@ -46,26 +47,40 @@ function App() {
 
   return (
     <div className={dark ? 'app dark' : 'app'}>
-      <header className="app-header">
-        <div className="title-group">
+      <header className={collapsed ? 'app-header is-collapsed' : 'app-header'}>
+        <div className="title-group" aria-expanded={!collapsed}>
           <h1 className="app-title">Health Update</h1>
-          <p className="subtitle">Recent timeline</p>
-          <p>This page is to provide a regular health update on Dad's condition. As we know he suffered a brain haemorrhage in August 2025. 
-            This is a very serious condition and providing updates regularly is proving really difficult for immediate family as the 
-            journey is so up and down. One minute he can be doing much better but the second bleed was quite recent and a shock to us 
-            all - this is still showing what damage has been done and we are unsure what recovery will look like.</p> 
-            
-            <p>It is likely to be a long up and down journey so providing even weekly updates is very difficult at times so the update may just be no change as 
-            that is all we can provide for now - however we will aim to try and update this weekly in an attempt to keep loved ones/family/friends updated.</p> 
-            
-            <p>For now Dad is fully mobile but needs assistance and prompts to do things like getting dressed in the morning. He is lucid sometimes but there is a long way to go
-            and so he at this time is unable to hold focus to have any meaningful conversations at this time. We just need to keep positive, allow him time to rest and updates will follow.</p>
-            
-            <p>We are unable to answer questions for now as this is a very challenging time right now - all we ask is that he's given time to have a stronger recovery this time. Thank you.</p>
+          {!collapsed && (
+            <>
+              <p className="subtitle">Recent timeline</p>
+              <p>This page is to provide a regular health update on Dad's condition. As we know he suffered a brain haemorrhage in August 2025. 
+                This is a very serious condition and providing updates regularly is proving really difficult for immediate family as the 
+                journey is so up and down. One minute he can be doing much better but the second bleed was quite recent and a shock to us 
+                all - this is still showing what damage has been done and we are unsure what recovery will look like.</p> 
+                
+              <p>It is likely to be a long up and down journey so providing even weekly updates is very difficult at times so the update may just be no change as 
+                that is all we can provide for now - however we will aim to try and update this weekly in an attempt to keep loved ones/family/friends updated.</p> 
+                
+              <p>For now Dad is fully mobile but needs assistance and prompts to do things like getting dressed in the morning. He is lucid sometimes but there is a long way to go
+                and so he at this time is unable to hold focus to have any meaningful conversations at this time. We just need to keep positive, allow him time to rest and updates will follow.</p>
+                
+              <p>We are unable to answer questions for now as this is a very challenging time right now - all we ask is that he's given time to have a stronger recovery this time. Thank you.</p>
+            </>
+          )}
         </div>
-        <button className="mode-toggle" onClick={() => setDark(d => !d)} aria-label="Toggle color theme">
-          {dark ? 'Light' : 'Dark'} Mode
-        </button>
+        <div className="header-actions">
+          <button className="mode-toggle" onClick={() => setDark(d => !d)} aria-label="Toggle color theme">
+            {dark ? 'Light' : 'Dark'} Mode
+          </button>
+          <button
+            className="collapse-toggle"
+            onClick={() => setCollapsed(c => !c)}
+            aria-label={collapsed ? 'Expand header' : 'Collapse header'}
+            aria-pressed={collapsed}
+          >
+            {collapsed ? 'Expand' : 'Collapse'}
+          </button>
+        </div>
       </header>
 
       <main className="content">
