@@ -6,6 +6,7 @@ type Entry = { id: number; date: string; text: string }
 function App() {
   // Timeline entries (newest first by date/time when rendered)
     const entries: Entry[] = [
+      { id: 19, date: '2025-11-30', text: 'Dad had a better sleep and was up and out of bed before 10am. Was hoping to get out of the house and about a bit today as the weather was bright.' },
       { id: 18, date: '2025-11-29', text: 'Dad constantly losing things including letters/glasses - very confused - not understanding what family are telling him about his home being his home - would understand better with rest - he is very restless - possibly medication side effects. Needs lots of rest and to do little by little each day then rest for now. Talking therapy planned for a week or twos time. Dad needs time at the moment.' },
       { id: 17, date: '2025-11-28', text: 'Dad convinced he is being moved out of his home - paranoid that family is selling it from under him - again the opposite is happening - reassuring him he is staying at home and we are stopping him from going in a care home.' },
       { id: 16, date: '2025-11-22', text: 'Dad more with it today - sometimes restless at night and wandering but sleeping a lot in the day to aid recovery.' },
