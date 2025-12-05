@@ -7,7 +7,7 @@ function App() {
   // Timeline entries (newest first by date/time when rendered)
     const entries: Entry[] = [
 
-      { id: 20, date: '2025-12-05', text: 'Ups and downs this week - at one point he was convinced he was in another house and needed to get to his own house. Couldnt understand it was his house. Confused. Elizabeth managed to show him using itags/ipad that he was at home and didnt need to go anywhere else. Reassuring him this way seems to have helped for now. Had some better sleeps after this. Awaiting support from talking therapy hopefully next week.' },
+      { id: 20, date: '2025-12-05', text: 'Ups and downs this week - at one point he was convinced he was in another house and needed to get to his own house. Couldn\'t understand it was his house. Confused. Elizabeth managed to show him using itags/ipad that he was at home and didn\'t need to go anywhere else. Reassuring him this way seems to have helped for now. Had some better sleeps after this. Awaiting support from talking therapy hopefully next week.' },
       { id: 19, date: '2025-11-30', text: 'Dad had a better sleep and was up and out of bed before 10am. Was hoping to get out of the house and about a bit today as the weather was bright. There is still an element of confusion and potential hallucinations overnight.' },
       { id: 18, date: '2025-11-29', text: 'Dad constantly losing things including letters/glasses - very confused - not understanding what family are telling him about his home being his home - would understand better with rest - he is very restless - possibly medication side effects. Needs lots of rest and to do little by little each day then rest for now. Talking therapy planned for a week or twos time. Dad needs time at the moment.' },
       { id: 17, date: '2025-11-28', text: 'Dad convinced he is being moved out of his home - paranoid that family is selling it from under him - again the opposite is happening - reassuring him he is staying at home and we are stopping him from going in a care home.' },
@@ -52,7 +52,7 @@ function App() {
         <div className="title-group" aria-expanded={!collapsed}>
           <h1 className="app-title">Health Update</h1>
           {!collapsed && (
-            <>
+            <div>
               <p className="subtitle">Recent timeline</p>
               <p>This page is to provide a regular health update on Dad's condition. As we know he suffered a brain haemorrhage in August 2025. 
                 This is a very serious condition and providing updates regularly is proving really difficult for immediate family as the 
@@ -66,7 +66,7 @@ function App() {
                 and so he at this time is unable to hold focus to have any meaningful conversations at this time. We just need to keep positive, allow him time to rest and updates will follow.</p>
                 
               <p>We are unable to answer questions for now as this is a very challenging time right now - all we ask is that he's given time to have a stronger recovery this time. Thank you.</p>
-            </>
+            </div>
           )}
         </div>
         <div className="header-actions">
