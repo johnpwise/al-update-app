@@ -7,6 +7,17 @@ function App() {
   // Timeline entries (newest first by date/time when rendered)
   const entries: Entry[] = [
     {
+      id: 24,
+      date: '2026-01-11',
+      text: `Had some better sleeps this week and can see the difference when he does - he seems more logical. Have reiterated the importance of trying to go to bed at the same time each evening 
+      to try to get back into circadium rhythm. Had a wandering spell again where he starts packing things up again though too. Also times this week where he still thinks he's in a hotel but later
+      in the week he seemed to be able to convince himself he was in his own kitchen so whether this is starting to sink in more? Talking therapy apparently went well according to dad. 
+      He mentioned how he was told he didn't need Speech and Language therapy by the visiting therapist who assessed him this week. We suspected this but was nice to have confirmed. 
+      Spoke to his Endocrinology secretary about his throid cancer checkup and made them aware of what had happened with dad re the bleeds. He's going to review notes but didn't think 
+      it was likely to be thryoid related which is good news at least but he will check and confirm to be sure after seeing notes and doing blood tests. Had a better evening speaking 
+      to him last night as although he was very sleepy/tired got him talking and his mind seemed more with it so will see what today brings when speak later on.`
+    },
+    {
       id: 23,
       date: '2026-01-03',
       text: `Christmas & New Year Update
@@ -15,7 +26,7 @@ Christmas was full of ups and downs. Went to stay with dad over Christmas and th
 
 He was so tired he went to bed early evening and Boxong Day/following day he developed a sense of paranoia again over his house and thinking it was being sold from under him. A lot of trauma from past events has arisen during this time including things like fighting off the housing development across the road etc. He clearly improves with lots of sleep so we spent a lot of time trying to get him to rest and take the pressure off mum for a while whilst down. The day we left Dad wasn\'t doing so well - he had got very confused and was quite upsetting/aggressive at times. 
 
-We think this is all down to tiredness and perhaps medication. This week has been a bit better so far - he seemed more with it on facetime calls and more logical in his thinking. We\'re constantly trying to keep his diet anti-inflammatory and trying new things to see if this reduces anxiety/confusion. He clearly needs time to settle since Christamas as it seemed to be a bit too much.
+We think this is all down to tiredness and perhaps medication. This week has been a bit better so far - he seemed more with it on facetime calls and more logical in his thinking. We're constantly trying to keep his diet anti-inflammatory and trying new things to see if this reduces anxiety/confusion. He clearly needs time to settle since Christamas as it seemed to be a bit too much.
 
 Talking therapist was a little concerned about Dad so engaged with the GP who came out to see him. The GP was very good and explained exaclty what has happened to him. Dad liked him and trusted him. The GP was truly amazed how well dad looked considering what he had read in his notes. It\'s possible the GP visit and medical person explaining things to him may have helped to settle his mind a bit now we\'re not sure and only time will tell but we\'ll keep going.`
     },
