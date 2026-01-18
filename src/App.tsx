@@ -7,6 +7,15 @@ function App() {
   // Timeline entries (newest first by date/time when rendered)
   const entries: Entry[] = [
     {
+      id: 25,
+      date: '2026-01-18',
+      text: `Had some good days this week where Dad was more himself - he had a constructive talking therapy session on Thursday and the two therapists were happy with some progress made.
+      He did have Thursday evening where he was a bit agitated and wanting to go home (not recognising he was already home) and was a bit wandery overnight (but previous nights he had a lot better sleeps). 
+      He seemed more logical in some of his thinking last night. I managed to talk to him about one of his favourite programmes 'Maigret' and got him to talk about it all. He recognised that he could relay 
+      this back to the therapist that he'd been able to talk to me about this and also that I'd set him the task of learning a bit of Italian with the carer who sees him weekly and is Italian. 
+      He is going to try and remember to tell his therapist how this goes next week. Will see how he is later this evening. No further medical follow up apart from a planned follow up MRI in March.`
+      },
+    {
       id: 24,
       date: '2026-01-11',
       text: `Had some better sleeps this week and can see the difference when he does - he seems more logical. Have reiterated the importance of trying to go to bed at the same time each evening 
