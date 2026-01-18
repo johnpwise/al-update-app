@@ -9,21 +9,21 @@ function App() {
     {
       id: 25,
       date: '2026-01-18',
-      text: `Had some good days this week where Dad was more himself - he had a constructive talking therapy session on Thursday and the two therapists were happy with some progress made.
-      He did have Thursday evening where he was a bit agitated and wanting to go home (not recognising he was already home) and was a bit wandery overnight (but previous nights he had a lot better sleeps). 
-      He seemed more logical in some of his thinking last night. I managed to talk to him about one of his favourite programmes 'Maigret' and got him to talk about it all. He recognised that he could relay 
-      this back to the therapist that he'd been able to talk to me about this and also that I'd set him the task of learning a bit of Italian with the carer who sees him weekly and is Italian. 
+      text: `Had some good days this week where Dad was more himself - he had a constructive talking therapy session on Thursday and the two therapists were happy with some progress made. He did have Thursday evening where he was a bit agitated and wanting to go home (not recognising he was already home) and was a bit wandery overnight (but previous nights he had a lot better sleeps). 
+
+      He seemed more logical in some of his thinking last night. I managed to talk to him about one of his favourite programmes 'Maigret' and got him to talk about it all. He recognised that he could relay this back to the therapist that he'd been able to talk to me about this and also that I'd set him the task of learning a bit of Italian with the carer who sees him weekly and is Italian. 
+      
       He is going to try and remember to tell his therapist how this goes next week. Will see how he is later this evening. No further medical follow up apart from a planned follow up MRI in March.`
       },
     {
       id: 24,
       date: '2026-01-11',
-      text: `Had some better sleeps this week and can see the difference when he does - he seems more logical. Have reiterated the importance of trying to go to bed at the same time each evening 
-      to try to get back into circadium rhythm. Had a wandering spell again where he starts packing things up again though too. Also times this week where he still thinks he's in a hotel but later
-      in the week he seemed to be able to convince himself he was in his own kitchen so whether this is starting to sink in more? Talking therapy apparently went well according to dad. 
-      He mentioned how he was told he didn't need Speech and Language therapy by the visiting therapist who assessed him this week. We suspected this but was nice to have confirmed. 
-      Spoke to his Endocrinology secretary about his throid cancer checkup and made them aware of what had happened with dad re the bleeds. He's going to review notes but didn't think 
-      it was likely to be thryoid related which is good news at least but he will check and confirm to be sure after seeing notes and doing blood tests. Had a better evening speaking 
+      text: `Had some better sleeps this week and can see the difference when he does - he seems more logical. Have reiterated the importance of trying to go to bed at the same time each evening to try to get back into circadium rhythm. Had a wandering spell again where he starts packing things up again though too. Also times this week where he still thinks he's in a hotel but later
+      
+      in the week he seemed to be able to convince himself he was in his own kitchen so whether this is starting to sink in more? Talking therapy apparently went well according to dad. He mentioned how he was told he didn't need Speech and Language therapy by the visiting therapist who assessed him this week. We suspected this but was nice to have confirmed. 
+      
+      Spoke to his Endocrinology secretary about his throid cancer checkup and made them aware of what had happened with dad re the bleeds. He's going to review notes but didn't think it was likely to be thryoid related which is good news at least but he will check and confirm to be sure after seeing notes and doing blood tests. Had a better evening speaking 
+      
       to him last night as although he was very sleepy/tired got him talking and his mind seemed more with it so will see what today brings when speak later on.`
     },
     {
