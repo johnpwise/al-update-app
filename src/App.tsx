@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 
 type Entry = { id: number; date: string; text: string }
@@ -9,15 +9,15 @@ function App() {
     {
       id: 27,
       date: '2026-02-01',
-      text: `Some challenging days over the last couple of days - prior to this he had been having some better days. He had seemed agiatated the last couple of nights as though he wants to go back to his own home despite being in it. This is impacting his recovery as he doesn't sleep so well and deep restorative sleep is key. 
+      text: `Some challenging days over the last couple of days - prior to this he had been having some better days. He had seemed agitated the last couple of nights as though he wants to go back to his own home despite being in it. This is impacting his recovery as he doesn't sleep so well and deep restorative sleep is key. 
 
       We can tell the difference when he's had a good sleep as he is much more rational and seems more like himself. This feels like a bit of a step back since last week but we know this happens and if he sleeps he does better normally. 
       
       Dad has an appointment with the clinical psychologist this week which we're hoping will help him find ways of remapping his brain more effectively however at this stage we're unclear if this is an appointment to help or to assess and join a waiting list but either way its some form of progress to help understand the waves of agitation/confusion we hope. 
       
-      Hope to find out more after his appointment on thurday afternoon as the occupational therapist is working hard to get dad any kind of help she can which is encouraging. 
+      Hope to find out more after his appointment on Thursday afternoon as the occupational therapist is working hard to get dad any kind of help she can which is encouraging. 
       
-      Still awaiting date for a scan and for now things are just wait and see sadly with no further info/investigations seemingly being done apart from through community heath outreach but that's better than nothing for now. 
+      Still awaiting date for a scan and for now things are just wait and see sadly with no further info/investigations seemingly being done apart from through community health outreach but that's better than nothing for now. 
       
       Spoke to dad briefly this morning and he had a better sleep so we'll see how he has got on today in a bit.`
     },
@@ -28,16 +28,16 @@ function App() {
              
       We took him to the bank to get him to see nothing was being kept from him and that he still could be supported to bank for himself. The bank were also incredibly patient and helpful with him which was nice. 
       
-      We took him on a day out in Whitstable and out for a publ lunch whilst mum went to an appointment in London as this would have been too much for Dad to cope with and we're not sure how far he can travel safely at this stage as the drs aren't very communicative at the moment. 
+      We took him on a day out in Whitstable and out for a pub lunch whilst mum went to an appointment in London as this would have been too much for Dad to cope with and we're not sure how far he can travel safely at this stage as the Drs aren't very communicative at the moment. 
       
       We tired him out and he managed quite a lot of walking that day and his bp was excellent in the evening so presume the walk helped but he was practically falling asleep on the way up to bed that night. It was nice to see him in person and see how much better he'd seemed here. 
       
-      We tried to get a few odd jobs done around the house to help them both too so that this wasn't snother added stress and Dad recognised this and appreciated the help. We tried to involve him in everything as much as we could so he felt we weren't just taking over. We left him in good spirits and returned home on the sunday.`
+      We tried to get a few odd jobs done around the house to help them both too so that this wasn't another added stress and Dad recognised this and appreciated the help. We tried to involve him in everything as much as we could so he felt we weren't just taking over. We left him in good spirits and returned home on the Sunday.`
     },
     {
       id: 25,
       date: '2026-01-18',
-      text: `Had some good days this week where Dad was more himself - he had a constructive talking therapy session on Thursday and the two therapists were happy with some progress made. He did have Thursday evening where he was a bit agitated and wanting to go home (not recognising he was already home) and was a bit wandery overnight (but previous nights he had a lot better sleeps). 
+      text: `Had some good days this week where Dad was more himself - he had a constructive talking therapy session on Thursday and the two therapists were happy with some progress made. He did have Thursday evening where he was a bit agitated and wanting to go home (not recognising he was already home) and was a bit wandering overnight (but previous nights he had a lot better sleeps). 
 
       He seemed more logical in some of his thinking last night. I managed to talk to him about one of his favourite programmes 'Maigret' and got him to talk about it all. He recognised that he could relay this back to the therapist that he'd been able to talk to me about this and also that I'd set him the task of learning a bit of Italian with the carer who sees him weekly and is Italian. 
       
@@ -46,11 +46,11 @@ function App() {
     {
       id: 24,
       date: '2026-01-11',
-      text: `Had some better sleeps this week and can see the difference when he does - he seems more logical. Have reiterated the importance of trying to go to bed at the same time each evening to try to get back into circadium rhythm. Had a wandering spell again where he starts packing things up again though too. Also times this week where he still thinks he's in a hotel but later
+      text: `Had some better sleeps this week and can see the difference when he does - he seems more logical. Have reiterated the importance of trying to go to bed at the same time each evening to try to get back into circadian rhythm. Had a wandering spell again where he starts packing things up again though too. Also times this week where he still thinks he's in a hotel but later
       
       in the week he seemed to be able to convince himself he was in his own kitchen so whether this is starting to sink in more? Talking therapy apparently went well according to dad. He mentioned how he was told he didn't need Speech and Language therapy by the visiting therapist who assessed him this week. We suspected this but was nice to have confirmed. 
       
-      Spoke to his Endocrinology secretary about his throid cancer checkup and made them aware of what had happened with dad re the bleeds. He's going to review notes but didn't think it was likely to be thryoid related which is good news at least but he will check and confirm to be sure after seeing notes and doing blood tests. Had a better evening speaking 
+      Spoke to his Endocrinology secretary about his thyroid cancer checkup and made them aware of what had happened with dad re the bleeds. He's going to review notes but didn't think it was likely to be thyroid related which is good news at least but he will check and confirm to be sure after seeing notes and doing blood tests. Had a better evening speaking 
       
       to him last night as although he was very sleepy/tired got him talking and his mind seemed more with it so will see what today brings when speak later on.`
     },
@@ -61,11 +61,11 @@ function App() {
 
       Christmas was full of ups and downs. Went to stay with dad over Christmas and the lead up to Christmas was better in that he had more lucid times where we could take him out for a coffee. Some confusion again over where he was - he thought he was at the airport at one stage. We spent a fair bit of time trying to reassure him he was now safe and at home. Christmas Eve wasn\'t so successful - he was wandering the house and didn\'t sleep at all so Christmas day he didn\'t want to get up and once he was up he was falling asleep in between dinner.
 
-      He was so tired he went to bed early evening and Boxong Day/following day he developed a sense of paranoia again over his house and thinking it was being sold from under him. A lot of trauma from past events has arisen during this time including things like fighting off the housing development across the road etc. He clearly improves with lots of sleep so we spent a lot of time trying to get him to rest and take the pressure off mum for a while whilst down. The day we left Dad wasn\'t doing so well - he had got very confused and was quite upsetting/aggressive at times. 
+      He was so tired he went to bed early evening and Boxing Day/following day he developed a sense of paranoia again over his house and thinking it was being sold from under him. A lot of trauma from past events has arisen during this time including things like fighting off the housing development across the road etc. He clearly improves with lots of sleep so we spent a lot of time trying to get him to rest and take the pressure off mum for a while whilst down. The day we left Dad wasn\'t doing so well - he had got very confused and was quite upsetting/aggressive at times. 
 
-      We think this is all down to tiredness and perhaps medication. This week has been a bit better so far - he seemed more with it on facetime calls and more logical in his thinking. We're constantly trying to keep his diet anti-inflammatory and trying new things to see if this reduces anxiety/confusion. He clearly needs time to settle since Christamas as it seemed to be a bit too much.
+      We think this is all down to tiredness and perhaps medication. This week has been a bit better so far - he seemed more with it on FaceTime calls and more logical in his thinking. We're constantly trying to keep his diet anti-inflammatory and trying new things to see if this reduces anxiety/confusion. He clearly needs time to settle since Christmas as it seemed to be a bit too much.
 
-      Talking therapist was a little concerned about Dad so engaged with the GP who came out to see him. The GP was very good and explained exaclty what has happened to him. Dad liked him and trusted him. The GP was truly amazed how well dad looked considering what he had read in his notes. It\'s possible the GP visit and medical person explaining things to him may have helped to settle his mind a bit now we\'re not sure and only time will tell but we\'ll keep going.`
+      Talking therapist was a little concerned about Dad so engaged with the GP who came out to see him. The GP was very good and explained exactly what has happened to him. Dad liked him and trusted him. The GP was truly amazed how well dad looked considering what he had read in his notes. It\'s possible the GP visit and medical person explaining things to him may have helped to settle his mind a bit now we\'re not sure and only time will tell but we\'ll keep going.`
     },
     {
       id: 22,
@@ -75,7 +75,7 @@ function App() {
     {
       id: 21,
       date: '2025-12-09',
-      text: `Still seemingly some confusion around needing to leave the house and return to home. Started talking therapy yesterday and had a good two hour session. Mostly chatted about the work days but this gave the therapist an idea on what to focus on in the therapy. She found him a fascinating charater. He will have another appt next week with her. He was quite tired after this - became a little confused again later and settled when he watched a music concert.`
+      text: `Still seemingly some confusion around needing to leave the house and return to home. Started talking therapy yesterday and had a good two hour session. Mostly chatted about the work days but this gave the therapist an idea on what to focus on in the therapy. She found him a fascinating character. He will have another appt next week with her. He was quite tired after this - became a little confused again later and settled when he watched a music concert.`
     },
     {
       id: 20,
@@ -115,7 +115,7 @@ function App() {
     {
       id: 13,
       date: '2025-11-05',
-      text: `Dad discharged from hospital again and returned home. Dad was very delierious/confused when home and convinced that his home was not his home but a copy of his home... took a long time to reassure him that this was not the case and there is still the belief on a regular basis that it is not his home or it has been sold from underneath him. A lot of confusion still and needs time to recover for now. It will be a slow recovery process and will be getting talking therapy soon to hopefully help him settle again.`
+      text: `Dad discharged from hospital again and returned home. Dad was very delirious/confused when home and convinced that his home was not his home but a copy of his home... took a long time to reassure him that this was not the case and there is still the belief on a regular basis that it is not his home or it has been sold from underneath him. A lot of confusion still and needs time to recover for now. It will be a slow recovery process and will be getting talking therapy soon to hopefully help him settle again.`
     },
     {
       id: 12,
@@ -125,7 +125,7 @@ function App() {
     {
       id: 11,
       date: '2025-10-27',
-      text: `Dad had a series of more wobbles after being in hospital - more mini strokes or these seemed to be anyway. Elizabeh back down to Kent as sounded as though dad was going further downhill. Dr had suggested the wobbles were actually seizures. To prevent these in future he was put on anti seizure meds and will continue to review this at a later date.`
+      text: `Dad had a series of more wobbles after being in hospital - more mini strokes or these seemed to be anyway. Elizabeth back down to Kent as sounded as though dad was going further downhill. Dr had suggested the wobbles were actually seizures. To prevent these in future he was put on anti seizure meds and will continue to review this at a later date.`
     },
     {
       id: 10,
@@ -145,12 +145,12 @@ function App() {
     {
       id: 7,
       date: '2025-09-11',
-      text: `After a lot of confusion/delerium/physio dad is discharged from hospital to continue the recovery at home as it was determined that familiar surroundings should help confusion. Elizabeth back to Leeds around 14th Sept due to work.`
+      text: `After a lot of confusion/delirium/physio dad is discharged from hospital to continue the recovery at home as it was determined that familiar surroundings should help confusion. Elizabeth back to Leeds around 14th Sept due to work.`
     },
     {
       id: 6,
       date: '2025-09-01',
-      text: `Dad gradually improved although there was a lot of confusion/delerium (around being in a hotel/on a boat/in Belfast - paranoia of people shooting people at night - lots of confused times and took a long time to get him out of this and convince him he was safe and in hospital. Also had blood pressure drops/seizures. Some good days with big improvements and then some scares/fears of new bleeds. Thankfully these were determined as either blood pressure drops or seizures.`
+      text: `Dad gradually improved although there was a lot of confusion/delirium (around being in a hotel/on a boat/in Belfast - paranoia of people shooting people at night - lots of confused times and took a long time to get him out of this and convince him he was safe and in hospital. Also had blood pressure drops/seizures. Some good days with big improvements and then some scares/fears of new bleeds. Thankfully these were determined as either blood pressure drops or seizures.`
     },
     {
       id: 5,
@@ -170,12 +170,12 @@ function App() {
     {
       id: 2,
       date: '2025-08-11',
-      text: `Dads 80th Birthday - survived the night in resuss - stabilised and moved to another ward for recovery. Awaited Stroke ward space at Canterbury hospital. Liz & John stayed overnight until moved to Canterbury hospital.`
+      text: `Dad's 80th Birthday - survived the night in resus - stabilised and moved to another ward for recovery. Awaited Stroke ward space at Canterbury hospital. Liz & John stayed overnight until moved to Canterbury hospital.`
     },
     {
       id: 1,
       date: '2025-08-10',
-      text: `Admitted to Hospital - CT scan showed big IntraCranial Hemorrhage. Admitted to Resuss - told to prep for worst - hope for best. 3% surivival rate given by consultant.`
+      text: `Admitted to Hospital - CT scan showed big intracranial haemorrhage. Admitted to resus - told to prep for worst - hope for best. 3% survival rate given by consultant.`
     }
   ]
 
@@ -196,8 +196,15 @@ function App() {
     return d.toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' })
   }
 
+  useEffect(() => {
+    document.body.classList.toggle('dark', dark)
+    return () => {
+      document.body.classList.remove('dark')
+    }
+  }, [dark])
+
   return (
-    <div className={dark ? 'app dark' : 'app'}>
+    <div className="app">
       <header className={collapsed ? 'app-header is-collapsed' : 'app-header'}>
         <div className="title-group" aria-expanded={!collapsed}>
           <h1 className="app-title">Health Update</h1>
