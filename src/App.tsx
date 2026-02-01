@@ -11,26 +11,28 @@ function App() {
       date: '2026-02-01',
       text: `Some challenging days over the last couple of days - prior to this he had been having some better days. He had seemed agiatated the last couple of nights as though he wants to go back to his own home despite being in it. This is impacting his recovery as he doesn't sleep so well and deep restorative sleep is key. 
 
-      We can tell the difference when he's had a good sleep as he is much more rational and seems more like himself. This feels like a bit of a step back since last week but we know this happens and if he sleeps he does better normally. Dad has an appointment with the clinical psychologist this week which we're hoping will 
+      We can tell the difference when he's had a good sleep as he is much more rational and seems more like himself. This feels like a bit of a step back since last week but we know this happens and if he sleeps he does better normally. 
       
-      help him find ways of remapping his brain more effectively however at this stage we're unclear if this is an appointment to help or to assess and join a waiting list but either way its some form of progress to help understand the waves of agitation/confusion we hope. Hope to find out more after his appointment on thurday 
+      Dad has an appointment with the clinical psychologist this week which we're hoping will help him find ways of remapping his brain more effectively however at this stage we're unclear if this is an appointment to help or to assess and join a waiting list but either way its some form of progress to help understand the waves of agitation/confusion we hope. 
       
-      afternoon as the occupational therapist is working hard to get dad any kind of help she can which is encouraging. Still awaiting date for a scan and for now things are just wait and see sadly with no further info/investigations seemingly being done apart from through community heath outreach but that's better than 
+      Hope to find out more after his appointment on thurday afternoon as the occupational therapist is working hard to get dad any kind of help she can which is encouraging. 
       
-      nothing for now.`
+      Still awaiting date for a scan and for now things are just wait and see sadly with no further info/investigations seemingly being done apart from through community heath outreach but that's better than nothing for now. 
+      
+      Spoke to dad briefly this morning and he had a better sleep so we'll see how he has got on today in a bit.`
     },
      {
       id: 26,
       date: '2026-01-27',
       text: `Delayed update - went down to Kent this weekend to see Dad. He had an excellent few days where he seemed far more himself. We took him out to see one of his best friends for a coffee in Canterbury and even he said that he seemed much more himself - yes there was the element of some confusion but not so bad at this time. 
              
-      We took him to the bank to get him to see nothing was being kept from him and that he still could be supported to bank for himself. The bank were also incredibly patient and helpful with him which was nice. We took him on a day out in Whitstable and out for a publ lunch whilst mum went to an appointment in London as this 
+      We took him to the bank to get him to see nothing was being kept from him and that he still could be supported to bank for himself. The bank were also incredibly patient and helpful with him which was nice. 
       
-      would have been too much for Dad to cope with and we're not sure how far he can travel safely at this stage as the drs aren't very communicative at the moment. We tired him out and he managed quite a lot of walking that day and his bp was excellent in the evening so presume the walk helped but he was practically falling 
+      We took him on a day out in Whitstable and out for a publ lunch whilst mum went to an appointment in London as this would have been too much for Dad to cope with and we're not sure how far he can travel safely at this stage as the drs aren't very communicative at the moment. 
       
-      asleep on the way up to bed that night. It was nice to see him in person and see how much better he'd seemed here. We tried to get a few odd jobs done around the house to help them both too so that this wasn't snother added stress and Dad recognised this and appreciated the help. We tried to involve him in everything as 
+      We tired him out and he managed quite a lot of walking that day and his bp was excellent in the evening so presume the walk helped but he was practically falling asleep on the way up to bed that night. It was nice to see him in person and see how much better he'd seemed here. 
       
-      smuch as we could so he felt we weren't just taking over. We left him in good spirits and returned home on the sunday.`
+      We tried to get a few odd jobs done around the house to help them both too so that this wasn't snother added stress and Dad recognised this and appreciated the help. We tried to involve him in everything as much as we could so he felt we weren't just taking over. We left him in good spirits and returned home on the sunday.`
     },
     {
       id: 25,
