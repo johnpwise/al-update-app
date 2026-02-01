@@ -7,6 +7,32 @@ function App() {
   // Timeline entries (newest first by date/time when rendered)
   const entries: Entry[] = [
     {
+      id: 27,
+      date: '2026-02-01',
+      text: `Some challenging days over the last couple of days - prior to this he had been having some better days. He had seemed agiatated the last couple of nights as though he wants to go back to his own home despite being in it. This is impacting his recovery as he doesn't sleep so well and deep restorative sleep is key. 
+
+      We can tell the difference when he's had a good sleep as he is much more rational and seems more like himself. This feels like a bit of a step back since last week but we know this happens and if he sleeps he does better normally. Dad has an appointment with the clinical psychologist this week which we're hoping will 
+      
+      help him find ways of remapping his brain more effectively however at this stage we're unclear if this is an appointment to help or to assess and join a waiting list but either way its some form of progress to help understand the waves of agitation/confusion we hope. Hope to find out more after his appointment on thurday 
+      
+      afternoon as the occupational therapist is working hard to get dad any kind of help she can which is encouraging. Still awaiting date for a scan and for now things are just wait and see sadly with no further info/investigations seemingly being done apart from through community heath outreach but that's better than 
+      
+      nothing for now.`
+    },
+     {
+      id: 26,
+      date: '2026-01-27',
+      text: `Delayed update - went down to Kent this weekend to see Dad. He had an excellent few days where he seemed far more himself. We took him out to see one of his best friends for a coffee in Canterbury and even he said that he seemed much more himself - yes there was the element of some confusion but not so bad at this time. 
+             
+      We took him to the bank to get him to see nothing was being kept from him and that he still could be supported to bank for himself. The bank were also incredibly patient and helpful with him which was nice. We took him on a day out in Whitstable and out for a publ lunch whilst mum went to an appointment in London as this 
+      
+      would have been too much for Dad to cope with and we're not sure how far he can travel safely at this stage as the drs aren't very communicative at the moment. We tired him out and he managed quite a lot of walking that day and his bp was excellent in the evening so presume the walk helped but he was practically falling 
+      
+      asleep on the way up to bed that night. It was nice to see him in person and see how much better he'd seemed here. We tried to get a few odd jobs done around the house to help them both too so that this wasn't snother added stress and Dad recognised this and appreciated the help. We tried to involve him in everything as 
+      
+      smuch as we could so he felt we weren't just taking over. We left him in good spirits and returned home on the sunday.`
+    },
+    {
       id: 25,
       date: '2026-01-18',
       text: `Had some good days this week where Dad was more himself - he had a constructive talking therapy session on Thursday and the two therapists were happy with some progress made. He did have Thursday evening where he was a bit agitated and wanting to go home (not recognising he was already home) and was a bit wandery overnight (but previous nights he had a lot better sleeps). 
@@ -31,13 +57,13 @@ function App() {
       date: '2026-01-03',
       text: `Christmas & New Year Update
 
-Christmas was full of ups and downs. Went to stay with dad over Christmas and the lead up to Christmas was better in that he had more lucid times where we could take him out for a coffee. Some confusion again over where he was - he thought he was at the airport at one stage. We spent a fair bit of time trying to reassure him he was now safe and at home. Christmas Eve wasn\'t so successful - he was wandering the house and didn\'t sleep at all so Christmas day he didn\'t want to get up and once he was up he was falling asleep in between dinner.
+      Christmas was full of ups and downs. Went to stay with dad over Christmas and the lead up to Christmas was better in that he had more lucid times where we could take him out for a coffee. Some confusion again over where he was - he thought he was at the airport at one stage. We spent a fair bit of time trying to reassure him he was now safe and at home. Christmas Eve wasn\'t so successful - he was wandering the house and didn\'t sleep at all so Christmas day he didn\'t want to get up and once he was up he was falling asleep in between dinner.
 
-He was so tired he went to bed early evening and Boxong Day/following day he developed a sense of paranoia again over his house and thinking it was being sold from under him. A lot of trauma from past events has arisen during this time including things like fighting off the housing development across the road etc. He clearly improves with lots of sleep so we spent a lot of time trying to get him to rest and take the pressure off mum for a while whilst down. The day we left Dad wasn\'t doing so well - he had got very confused and was quite upsetting/aggressive at times. 
+      He was so tired he went to bed early evening and Boxong Day/following day he developed a sense of paranoia again over his house and thinking it was being sold from under him. A lot of trauma from past events has arisen during this time including things like fighting off the housing development across the road etc. He clearly improves with lots of sleep so we spent a lot of time trying to get him to rest and take the pressure off mum for a while whilst down. The day we left Dad wasn\'t doing so well - he had got very confused and was quite upsetting/aggressive at times. 
 
-We think this is all down to tiredness and perhaps medication. This week has been a bit better so far - he seemed more with it on facetime calls and more logical in his thinking. We're constantly trying to keep his diet anti-inflammatory and trying new things to see if this reduces anxiety/confusion. He clearly needs time to settle since Christamas as it seemed to be a bit too much.
+      We think this is all down to tiredness and perhaps medication. This week has been a bit better so far - he seemed more with it on facetime calls and more logical in his thinking. We're constantly trying to keep his diet anti-inflammatory and trying new things to see if this reduces anxiety/confusion. He clearly needs time to settle since Christamas as it seemed to be a bit too much.
 
-Talking therapist was a little concerned about Dad so engaged with the GP who came out to see him. The GP was very good and explained exaclty what has happened to him. Dad liked him and trusted him. The GP was truly amazed how well dad looked considering what he had read in his notes. It\'s possible the GP visit and medical person explaining things to him may have helped to settle his mind a bit now we\'re not sure and only time will tell but we\'ll keep going.`
+      Talking therapist was a little concerned about Dad so engaged with the GP who came out to see him. The GP was very good and explained exaclty what has happened to him. Dad liked him and trusted him. The GP was truly amazed how well dad looked considering what he had read in his notes. It\'s possible the GP visit and medical person explaining things to him may have helped to settle his mind a bit now we\'re not sure and only time will tell but we\'ll keep going.`
     },
     {
       id: 22,
