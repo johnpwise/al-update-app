@@ -20,6 +20,7 @@ function monthName(m: number) {
 export default function CalendarGrid({ entries, year }: { entries: Entry[]; year: number }) {
   const map = new Map(entries.map(e => [e.date, e.note]))
   const minColorDate = new Date('2026-02-16')
+  const forceNeutralFrom = new Date('2026-06-12')
 
   const months = Array.from({ length: 12 }, (_, i) => i)
 
@@ -34,6 +35,18 @@ export default function CalendarGrid({ entries, year }: { entries: Entry[]; year
           // leave dates before minColorDate as neutral (grey)
           const isoDate = new Date(iso + 'T00:00:00')
           if (isoDate < minColorDate) {
+            return (
+              <div
+                key={iso}
+                className={`cg-cell neutral`}
+                title={`${iso}${note ? ' — ' + note : ''}`}
+                aria-label={`${iso} neutral`}
+              />
+            )
+          }
+
+          // force neutral (grey) for dates from 2026-06-12 onward
+          if (isoDate >= forceNeutralFrom) {
             return (
               <div
                 key={iso}
