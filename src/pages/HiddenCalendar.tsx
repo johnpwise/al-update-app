@@ -12,14 +12,15 @@ export default function HiddenCalendar() {
         </div>
       </div>
 
-      <p className="hc-description">Green = good day, Red = bad day. Hover a cell to see notes.</p>
+      <p className="hc-description">Green = good day, Red = bad day, Yellow = ok/unclear. Hover a cell to see notes. A 'P' indicates paranoia mentioned on that day.</p>
 
       <CalendarGrid entries={calendarData as {date:string;note:string}[]} year={2026} />
 
       <div className="hc-legend">
         <span className="legend-item"><span className="cell legend-good"/> Good</span>
         <span className="legend-item"><span className="cell legend-bad"/> Bad</span>
-        <span className="legend-item"><span className="cell legend-neutral"/> No data</span>
+        <span className="legend-item"><span className="cell legend-ok"/> OK / unclear</span>
+        <span className="legend-item"><span className="cell legend-p"/> P = Paranoia</span>
       </div>
     </div>
   )
