@@ -1,4 +1,3 @@
-import React from 'react'
 import './CalendarGrid.css'
 
 type Entry = { date: string; note: string }

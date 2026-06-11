@@ -1,4 +1,3 @@
-import React from 'react'
 import './HiddenCalendar.css'
 import CalendarGrid from '../components/CalendarGrid'
 import calendarData from '../data/calendar-2026.json'
