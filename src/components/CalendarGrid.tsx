@@ -19,6 +19,7 @@ function monthName(m: number) {
 
 export default function CalendarGrid({ entries, year }: { entries: Entry[]; year: number }) {
   const map = new Map(entries.map(e => [e.date, e.note]))
+  const minColorDate = new Date('2026-02-16')
 
   const months = Array.from({ length: 12 }, (_, i) => i)
 
@@ -30,13 +31,28 @@ export default function CalendarGrid({ entries, year }: { entries: Entry[]; year
           const day = d + 1
           const iso = `${year}-${String(m + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`
           const note = map.get(iso)
+          // leave dates before minColorDate as neutral (grey)
+          const isoDate = new Date(iso + 'T00:00:00')
+          if (isoDate < minColorDate) {
+            return (
+              <div
+                key={iso}
+                className={`cg-cell neutral`}
+                title={`${iso}${note ? ' — ' + note : ''}`}
+                aria-label={`${iso} neutral`}
+              />
+            )
+          }
+
           const { status, paranoia } = analyzeNote(note)
+          // if there's no entry in the JSON, show neutral (grey)
+          const displayStatus = note === undefined ? 'neutral' : status
           return (
             <div
               key={iso}
-              className={`cg-cell ${status}`}
+              className={`cg-cell ${displayStatus}`}
               title={`${iso}${note ? ' — ' + note : ''}`}
-              aria-label={`${iso} ${status}${paranoia ? ' paranoia' : ''}`}
+              aria-label={`${iso} ${displayStatus}${paranoia ? ' paranoia' : ''}`}
             >
               {paranoia && <span className="p-badge">P</span>}
             </div>

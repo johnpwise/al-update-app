@@ -7,13 +7,15 @@
 .cg-cell.bad{background: #e74c3c;border-color: rgba(0,0,0,0.12)}
 .cg-cell.ok{background: #f4d35e;border-color: rgba(0,0,0,0.08)}
 
-.p-badge{position:absolute;right:-4px;bottom:-6px;background:rgba(0,0,0,0.75);color:#fff;font-size:9px;line-height:10px;padding:1px 3px;border-radius:3px}
+.p-badge{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:10px;line-height:12px;font-weight:700;background:transparent;padding:0}
+.cg-cell.good .p-badge,.cg-cell.bad .p-badge{color:#fff}
+.cg-cell.ok .p-badge,.cg-cell.neutral .p-badge{color:#000}
 
 /* legend helpers */
 .legend-good{background:#2ecc71}
 .legend-bad{background:#e74c3c}
 .legend-ok{background:#f4d35e}
-.legend-p{background:rgba(0,0,0,0.75);color:#fff;padding:1px 4px;border-radius:3px;font-size:12px}
+.legend-p{background:transparent;color:#000;border:1px solid rgba(0,0,0,0.12);padding:1px 6px;border-radius:3px;font-size:12px}
 
 @media (max-width:600px){
   .cg-days{gap:3px}
