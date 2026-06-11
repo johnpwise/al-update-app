@@ -1,0 +1,7 @@
+.hidden-calendar-page{padding:20px}
+.hc-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.hc-description{color:var(--muted-text);margin-bottom:12px}
+.hc-legend{margin-top:12px;display:flex;gap:12px;align-items:center}
+.hc-legend .legend-item{display:flex;align-items:center;gap:8px}
+.hc-legend .cell{width:14px;height:14px;border-radius:2px;display:inline-block}
+.hc-actions a{color:var(--link-color)}

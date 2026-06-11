@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import entriesData from './entries.json'
 import './App.css'
+import HiddenCalendar from './pages/HiddenCalendar'
 
 type Entry = { id: number; date: string; text: string }
 
@@ -31,6 +32,18 @@ function App() {
       document.body.classList.remove('dark')
     }
   }, [dark])
+
+  // simple hash routing: show hidden calendar at #/calendar-admin
+  const [route, setRoute] = useState<string>(window.location.hash || '#/')
+  useEffect(() => {
+    const onHash = () => setRoute(window.location.hash || '#/')
+    window.addEventListener('hashchange', onHash)
+    return () => window.removeEventListener('hashchange', onHash)
+  }, [])
+
+  if (route === '#/calendar-admin') {
+    return <HiddenCalendar />
+  }
 
   return (
     <div className="app">

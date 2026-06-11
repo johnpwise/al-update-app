@@ -1,0 +1,18 @@
+.calendar-grid{display:flex;flex-direction:column;gap:8px}
+.cg-month{display:flex;align-items:center;gap:12px}
+.cg-month-label{width:64px;font-size:13px;color:var(--muted-text)}
+.cg-days{display:flex;flex-wrap:wrap;gap:4px}
+.cg-cell{width:14px;height:14px;border-radius:3px;background:#eee;border:1px solid rgba(0,0,0,0.06)}
+.cg-cell.good{background: #2ecc71;border-color: rgba(0,0,0,0.12)}
+.cg-cell.bad{background: #e74c3c;border-color: rgba(0,0,0,0.12)}
+.cg-cell.neutral{background: #f0f0f0}
+
+/* legend helpers */
+.legend-good{background:#2ecc71}
+.legend-bad{background:#e74c3c}
+.legend-neutral{background:#f0f0f0}
+
+@media (max-width:600px){
+  .cg-days{gap:3px}
+  .cg-cell{width:12px;height:12px}
+}
