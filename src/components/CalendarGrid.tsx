@@ -1,6 +1,6 @@
 import './CalendarGrid.css'
 
-type Entry = { date: string; note: string; Outcome?: string }
+type Entry = { date: string; note: string; Outcome?: string; outcome?: string }
 
 function analyzeNote(note: string | undefined) {
   // returns status: 'good' | 'bad' | 'ok' and paranoia flag
