@@ -54,16 +54,21 @@ export default function CalendarGrid({ entries, year }: { entries: Entry[]; year
           let displayStatus: 'good' | 'bad' | 'ok' | 'neutral'
           let paranoia = false
 
+          const baseParanoia = note ? note.toLowerCase().includes('parano') || note.toLowerCase().includes('paranoid') : false
+          paranoia = baseParanoia
+
           if (outcome === 'good') {
             displayStatus = 'good'
           } else if (outcome === 'bad') {
             displayStatus = 'bad'
+          } else if (outcome === 'ok') {
+            displayStatus = 'ok'
           } else if (note === undefined || note === '') {
             displayStatus = 'neutral'
           } else {
             const res = analyzeNote(note)
             displayStatus = res.status as 'good' | 'bad' | 'ok'
-            paranoia = res.paranoia
+            paranoia = baseParanoia || res.paranoia
           }
           const titleText = note ? `${iso} — ${note}` : `${iso}${entry ? ' — no note' : ''}`
           return (
