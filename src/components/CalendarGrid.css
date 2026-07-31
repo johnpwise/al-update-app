@@ -1,4 +1,4 @@
-.calendar-grid{display:flex;flex-direction:column;gap:8px}
+.calendar-grid{display:flex;flex-direction:column;gap:8px;position:relative}
 .cg-month{display:flex;align-items:center;gap:12px}
 .cg-month-label{width:64px;font-size:13px;color:var(--muted-text)}
 .cg-days{display:flex;flex-wrap:wrap;gap:4px}
@@ -6,6 +6,8 @@
 .cg-cell.good{background: #2ecc71;border-color: rgba(0,0,0,0.12)}
 .cg-cell.bad{background: #e74c3c;border-color: rgba(0,0,0,0.12)}
 .cg-cell.ok{background: #f4d35e;border-color: rgba(0,0,0,0.08)}
+.cg-tooltip{position:fixed;z-index:20;max-width:min(320px, calc(100vw - 24px));padding:8px 10px;border-radius:6px;background:rgba(17,24,39,0.95);color:#fff;font-size:12px;line-height:1.4;box-shadow:0 8px 24px rgba(0,0,0,0.2);pointer-events:none}
+.cg-tooltip strong{display:block;margin-bottom:4px}
 
 .p-badge{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:10px;line-height:12px;font-weight:700;background:transparent;padding:0}
 .cg-cell.good .p-badge,.cg-cell.bad .p-badge{color:#fff}

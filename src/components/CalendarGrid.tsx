@@ -1,6 +1,15 @@
+import { useState, type MouseEvent } from 'react'
 import './CalendarGrid.css'
 
-type Entry = { date: string; note: string; Outcome?: string; outcome?: string }
+type Entry = { date: string; note?: string; Outcome?: string; outcome?: string }
+
+function normalizeOutcome(value: string | undefined) {
+  const normalized = value?.trim().toLowerCase()
+  if (normalized === 'good') return 'good'
+  if (normalized === 'bad') return 'bad'
+  if (normalized === 'ok' || normalized === 'neutral' || normalized === 'unclear') return 'ok'
+  return undefined
+}
 
 function analyzeNote(note: string | undefined) {
   // returns status: 'good' | 'bad' | 'ok' and paranoia flag
@@ -19,10 +28,18 @@ function monthName(m: number) {
 
 export default function CalendarGrid({ entries, year }: { entries: Entry[]; year: number }) {
   const map = new Map(entries.map(e => [e.date, e]))
-  const minColorDate = new Date('2026-02-16')
-  const forceNeutralFrom = new Date('2026-06-12')
-
   const months = Array.from({ length: 12 }, (_, i) => i)
+  const [tooltip, setTooltip] = useState<{ date: string; note: string; x: number; y: number } | null>(null)
+
+  const showTooltip = (event: MouseEvent<HTMLDivElement>, date: string, note: string | undefined) => {
+    if (!note) {
+      setTooltip(null)
+      return
+    }
+    setTooltip({ date, note, x: event.clientX + 12, y: event.clientY + 12 })
+  }
+
+  const hideTooltip = () => setTooltip(null)
 
   return (
     <div className="calendar-grid">
@@ -33,51 +50,32 @@ export default function CalendarGrid({ entries, year }: { entries: Entry[]; year
           const iso = `${year}-${String(m + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`
           const entry = map.get(iso) as Entry | undefined
           const note = entry?.note
-          // leave dates before minColorDate as neutral (grey)
-          const isoDate = new Date(iso + 'T00:00:00')
-          if (isoDate < minColorDate) {
-            return (
-              <div
-                key={iso}
-                className={`cg-cell neutral`}
-                title={`${iso}${note ? ' — ' + note : ''}`}
-                aria-label={`${iso} neutral`}
-              />
-            )
-          }
-
-          // force neutral (grey) for dates from 2026-06-12 onward
-          if (isoDate >= forceNeutralFrom) {
-            return (
-              <div
-                key={iso}
-                className={`cg-cell neutral`}
-                title={`${iso}${note ? ' — ' + note : ''}`}
-                aria-label={`${iso} neutral`}
-              />
-            )
-          }
-          // Prefer explicit Outcome if present
-          const outcome = entry?.Outcome || entry?.outcome
+          const outcome = normalizeOutcome(entry?.Outcome || entry?.outcome)
           let displayStatus: 'good' | 'bad' | 'ok' | 'neutral'
           let paranoia = false
-          if (outcome === 'Good') {
+
+          if (outcome === 'good') {
             displayStatus = 'good'
-          } else if (outcome === 'Bad') {
+          } else if (outcome === 'bad') {
             displayStatus = 'bad'
-          } else if (note === undefined) {
+          } else if (note === undefined || note === '') {
             displayStatus = 'neutral'
           } else {
             const res = analyzeNote(note)
-            displayStatus = res.status as any
+            displayStatus = res.status as 'good' | 'bad' | 'ok'
             paranoia = res.paranoia
           }
+          const titleText = note ? `${iso} — ${note}` : `${iso}${entry ? ' — no note' : ''}`
           return (
             <div
               key={iso}
               className={`cg-cell ${displayStatus}`}
-              title={`${iso}${note ? ' — ' + note : ''}`}
+              title={titleText}
               aria-label={`${iso} ${displayStatus}${paranoia ? ' paranoia' : ''}`}
+              onMouseEnter={event => showTooltip(event, iso, note)}
+              onMouseLeave={hideTooltip}
+              onFocus={event => showTooltip(event as unknown as MouseEvent<HTMLDivElement>, iso, note)}
+              onBlur={hideTooltip}
             >
               {paranoia && <span className="p-badge">P</span>}
             </div>
@@ -91,6 +89,12 @@ export default function CalendarGrid({ entries, year }: { entries: Entry[]; year
           </div>
         )
       })}
+      {tooltip && (
+        <div className="cg-tooltip" style={{ left: tooltip.x, top: tooltip.y }} role="status">
+          <strong>{tooltip.date}</strong>
+          <div>{tooltip.note}</div>
+        </div>
+      )}
     </div>
   )
 }
